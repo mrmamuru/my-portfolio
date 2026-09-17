@@ -17,6 +17,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 901px)');
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => desktop.removeEventListener('change', closeOnDesktop);
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -43,12 +50,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <button className="nav__mark" onClick={() => navigate('home')} aria-label="Mr. Mamuru — Home">MMZ<span>.</span></button>
-      <nav className={open ? 'nav__links nav__links--open' : 'nav__links'} aria-label="Main navigation">
+      <nav id="main-navigation" className={open ? 'nav__links nav__links--open' : 'nav__links'} aria-label="Main navigation">
         {links.map(([id, label]) => (
           <button key={id} onClick={() => navigate(id)}>{label}</button>
         ))}
       </nav>
-      <button className="nav__menu" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+      <button className="nav__menu" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="main-navigation">
         {open ? <X size={21} /> : <Menu size={21} />}
       </button>
     </header>

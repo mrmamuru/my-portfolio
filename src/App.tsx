@@ -8,9 +8,9 @@ import { FilmmakingGallery } from './components/FilmmakingGallery';
 const film = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
 
 const creations = [
-  { number: '01', title: 'Filmmaking', tags: ['Films', 'Visual Stories', 'Behind the Scenes'], image: '/images/film-baba.jpg' },
+  { number: '01', title: 'Filmmaking', tags: ['Films', 'Visual Stories', 'Behind the Scenes'], image: '/images/film-noyon-tara.jpg' },
   { number: '02', title: 'Content', tags: ['Digital Content', 'Social Media', 'Creative Campaigns'], image: '/images/mr-mamuru-portrait.png' },
-  { number: '03', title: 'Production', tags: ['Concept', 'Production', 'Post Production'], image: '/images/the-purest-solutions-launch.png' },
+  { number: '03', title: 'Production', tags: ['Concept', 'Production', 'Post Production'], image: '/images/production-studio.jpeg' },
   { number: '04', title: 'ALIXA', tags: ['Founder', 'International Perfume Brand'], image: '/images/alixa-woodland.jpg', link: 'https://thealixa.com' },
 ];
 
@@ -20,9 +20,9 @@ const projects = [
 ];
 
 const alixaPhotos = [
- { image: '/images/alixa-botanical.jpg', title: 'Rooted in nature', detail: 'Foliage & texture', alt: 'ALIXA Signature bottle nestled among green leaves and natural roots' },
- { image: '/images/alixa-midnight-blue.jpg', title: 'Midnight blue', detail: 'Colour & atmosphere', alt: 'ALIXA Signature bottle and packaging in deep blue studio light' },
- { image: '/images/alixa-soft-shadow.jpg', title: 'Quiet contrast', detail: 'Light & shadow', alt: 'ALIXA Signature bottle against a muted grey-green surface with a defined shadow' },
+ { image: '/images/alixa-stone-garden.jpg', title: 'Rooted in nature', detail: 'Stone & greenery', alt: 'ALIXA Signature perfume resting on smooth pale stones surrounded by green leaves' },
+ { image: '/images/alixa-blue-portrait.jpg', title: 'Midnight blue', detail: 'Colour & atmosphere', alt: 'Upright ALIXA Signature perfume bottle against a deep blue studio background' },
+ { image: '/images/alixa-woodland.jpg', title: 'The signature', detail: 'Wood & shadow', alt: 'ALIXA Signature perfume resting on textured wood in soft, dark green light' },
 ];
 
 const reveal = { initial: { opacity: 0, y: 36 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.15 }, transition: { duration: .85, ease: [0.16, 1, 0.3, 1] as const } };
