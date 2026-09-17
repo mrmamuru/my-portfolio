@@ -3,11 +3,10 @@ import { ArrowLeft } from 'lucide-react';
 
 const works = [
   { image: 'film-baba', title: 'Baba', category: 'Film poster' },
-  { image: 'film-90s-love', title: '90s Love', category: 'Film poster' },
-  { image: 'film-our-childhood', title: 'Our Childhood', category: 'Film poster' },
-  { image: 'film-tea', title: 'Cha Sobar Sathe Khaowa Jay Na', category: 'Film poster' },
   { image: 'film-noyon-tara', title: 'Noyon Tara', category: 'Film poster' },
+  { image: 'film-tea', title: 'Cha Sobar Sathe Khaowa Jay Na', category: 'Film poster' },
   { image: 'film-eka', title: 'Eka', category: 'Film poster' },
+  { image: 'film-our-childhood', title: 'Our Childhood', category: 'Film poster' },
   { image: 'film-noyon-tara-bts', title: 'Noyon Tara', category: 'Behind the scenes' },
   { image: 'film-cinematic-still', title: 'Cinematic still', category: 'Frame study' },
 ];
